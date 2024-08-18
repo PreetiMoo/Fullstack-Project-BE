@@ -7,7 +7,6 @@ const User = sequelize.define('User', {
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
-    defaultValue: 0,
   },
   username: {
     type: DataTypes.STRING,
@@ -36,5 +35,8 @@ const User = sequelize.define('User', {
   tableName: 'Users', 
   timestamps: false,
 });
+
+const USER_TYPE ={BANKER:"banker", CUSTOMER:"customer"}
+User.USER_TYPE = USER_TYPE
 
 module.exports = User;

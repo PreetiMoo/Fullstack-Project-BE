@@ -32,6 +32,7 @@ app.use("/accounts", require("./routes/accounts"));
 app.use("/transactions/banker", require("./routes/transaction_banker"));
 app.use("/transactions/cust", require("./routes/transaction_customer"));
 app.use("/balance", require("./routes/balance"));
+app.use("/register", require("./routes/register"));
 
 
 
