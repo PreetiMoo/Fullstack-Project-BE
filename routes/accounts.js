@@ -7,7 +7,10 @@ const authenticateBankerToken = require('../middleware/authenticateBankerToken')
 
 router.get('/', authenticateBankerToken, async(req,res) => {
     try{
-        const customers = await User.findAll({ where: { usertype: 'customer' } });
+        const customers = await User.findAll({
+            where: { usertype: 'customer' },
+            attributes: { exclude: ['password','usertype'] } 
+          });
         console.log(customers);
         res.send(customers);
        } catch (err) {
