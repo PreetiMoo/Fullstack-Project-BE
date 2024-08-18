@@ -4,6 +4,7 @@ const Sequelize = require("sequelize");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',

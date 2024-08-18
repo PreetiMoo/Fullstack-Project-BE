@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 const sqlite3 = require('sqlite3').verbose();
-
+const path = require('path');
 
 const sequelize = new Sequelize( {
  dialect: 'sqlite',
