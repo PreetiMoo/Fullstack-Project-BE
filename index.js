@@ -7,6 +7,7 @@ const cors = require("cors");
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: './database.sqlite',
+  dialectModule: sqlite3,
   logging: false
 });
 
