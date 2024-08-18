@@ -26,7 +26,7 @@ async function login(req,res,usertype) {
     const user = await users.findOne({ where: { username: req.body.username } });
 
     if (user) {
-      console.log("User found");
+      console.log("User found", user);
 
       if (user.password === req.body.password) { 
 

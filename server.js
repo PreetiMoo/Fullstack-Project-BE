@@ -5,11 +5,8 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const sequelize = new Sequelize({
-  dialect: 'mysql',
-  storage: 'C:/Program Files/MySQL/MySQL Server 8.0/bin',
-  password: 'Preeti',
-  username: 'root',
-  database: "bank",
+  dialect: 'sqlite',
+  storage: './database.sqlite',
   logging: false
 });
 

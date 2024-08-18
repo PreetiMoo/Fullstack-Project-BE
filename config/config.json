@@ -1,23 +1,14 @@
 {
   "development": {
-    "username": "root",
-    "password": "Preeti",
-    "database": "Bank",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "sqlite",
+     "storage": "../database.sqlite"
   },
   "test": {
-    "username": "root",
-    "password": "Preeti",
-    "database": "Bank",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "sqlite",
+     "storage": "../database.sqlite"
   },
   "production": {
-    "username": "root",
-    "password": "Preeti",
-    "database": "Bank",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "sqlite",
+     "storage": "../database.sqlite"
   }
 }
