@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 
-router.use("/login", require("./routes/login"));
-router.use("/transfers", require("./routes/transfers_customer"));
-router.use("/accounts", require("./routes/accounts"));
-router.use("/transactions/banker", require("./routes/transaction_banker"));
-router.use("/transactions/cust", require("./routes/transaction_customer"));
-router.use("/balance", require("./routes/balance"));
+router.use("/login", require("./login"));
+router.use("/transfers", require("./transfers_customer"));
+router.use("/accounts", require("./accounts"));
+router.use("/transactions/banker", require("./transaction_banker"));
+router.use("/transactions/cust", require("./transaction_customer"));
+router.use("/balance", require("./balance"));
 
 module.exports = router;
