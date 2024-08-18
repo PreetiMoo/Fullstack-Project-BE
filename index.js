@@ -7,7 +7,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: './database.sqlite',
+  storage: './database/database.sqlite',
   dialectModule: sqlite3,
   logging: false
 });
