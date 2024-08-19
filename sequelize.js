@@ -1,11 +1,10 @@
+require("dotenv").config();
 const { Sequelize } = require("sequelize");
-const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
 
-const sequelize = new Sequelize( {
- dialect: 'sqlite',
- storage: path.resolve(__dirname, 'database.sqlite'),
- dialectModule: sqlite3
+
+const sequelize = new Sequelize(process.env.DATABASE_DATABASE, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, {
+  host: process.env.DATABASE_HOST,
+  dialect: "postgres" 
 });
 
 

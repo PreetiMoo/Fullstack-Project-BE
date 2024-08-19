@@ -7,10 +7,11 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: path.resolve(__dirname, 'database.sqlite'),
-  dialectModule: sqlite3,
-  logging: false
+  dialect: 'postgres',
+  host: process.env.DATABASE_HOST,       
+  database: process.env.DATABASE_DATABASE,   
+  username: process.env.DATABASE_USER, 
+  password: process.env.DATABASE_PASSWORD, 
 });
 
 try {

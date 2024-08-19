@@ -1,17 +1,26 @@
 {
   "development": {
-    "dialect": "sqlite",
-     "storage": "../database.sqlite" 
+    "dialect": "postgres",
+    "host": "ep-gentle-frog-a4q0r7lq-pooler.us-east-1.aws.neon.tech",
+    "database": "verceldb",
+    "username": "default",
+    "password": "Kyoen7lVjc5g"
       
   },
   "test": {
-    "dialect": "sqlite",
-     "storage": "../database.sqlite"
+    "dialect": "postgres",
+    "host": "ep-gentle-frog-a4q0r7lq-pooler.us-east-1.aws.neon.tech",
+    "database": "verceldb",
+    "username": "default",
+    "password": "Kyoen7lVjc5g"
       
   },
   "production": {
-    "dialect": "sqlite",
-     "storage": "../database.sqlite"
+    "dialect": "postgres",
+    "host": "ep-gentle-frog-a4q0r7lq-pooler.us-east-1.aws.neon.tech",
+    "database": "verceldb",
+    "username": "default",
+    "password": "Kyoen7lVjc5g"
       
   }
 }
