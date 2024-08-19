@@ -8,6 +8,7 @@ const path = require('path');
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
+  dialectModule: require('pg'),
   host: process.env.DATABASE_HOST,       
   database: process.env.DATABASE_DATABASE,   
   username: process.env.DATABASE_USER, 
