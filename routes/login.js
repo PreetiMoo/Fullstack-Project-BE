@@ -24,19 +24,23 @@ async function login(req, res, usertype) {
       console.log('Username is undefined in the request body!');
       return res.status(400).json({ error: "Username is required!" });
     }
+    if (!req.body.password) {
+      console.log('Password is undefined in the request body!');
+      return res.status(400).json({ error: "Password is required!" });
+    }
 
     const user = await users.findOne({ where: { username: req.body.username } });
 
     if (user) {
       console.log("User found");
 
-      // Hash the incoming password with the secret key
+      
       const hashedPassword = crypto
         .createHmac('sha512', SECRET_KEY)
         .update(req.body.password)
         .digest('hex');
 
-      // Compare the hashed password with the stored hashed password
+      
       if (user.password === hashedPassword) { 
         if (user.usertype !== usertype) {
           console.log(`User is not a ${usertype}!`);
