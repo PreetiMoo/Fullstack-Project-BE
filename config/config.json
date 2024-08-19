@@ -4,7 +4,13 @@
     "host": "ep-gentle-frog-a4q0r7lq-pooler.us-east-1.aws.neon.tech",
     "database": "verceldb",
     "username": "default",
-    "password": "Kyoen7lVjc5g"
+    "password": "Kyoen7lVjc5g",
+    "dialectOptions": {
+      "ssl": {
+        "require": true, 
+        "rejectUnauthorized": false
+      }
+    }
       
   },
   "test": {
@@ -12,7 +18,13 @@
     "host": "ep-gentle-frog-a4q0r7lq-pooler.us-east-1.aws.neon.tech",
     "database": "verceldb",
     "username": "default",
-    "password": "Kyoen7lVjc5g"
+    "password": "Kyoen7lVjc5g",
+    "dialectOptions": {
+      "ssl": {
+        "require": true, 
+        "rejectUnauthorized": false
+      }
+    }
       
   },
   "production": {
@@ -20,7 +32,13 @@
     "host": "ep-gentle-frog-a4q0r7lq-pooler.us-east-1.aws.neon.tech",
     "database": "verceldb",
     "username": "default",
-    "password": "Kyoen7lVjc5g"
+    "password": "Kyoen7lVjc5g",
+    "dialectOptions": {
+      "ssl": {
+        "require": true, 
+        "rejectUnauthorized": false
+      }
+    }
       
   }
 }
