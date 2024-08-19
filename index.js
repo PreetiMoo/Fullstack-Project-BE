@@ -33,6 +33,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use(cors({
+  origin: '*', // Allow all origins
+}));
+
 
 app.use("/login", require("./routes/login"));
 app.use("/transfers", require("./routes/transfers_customer"));
