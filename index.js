@@ -30,12 +30,19 @@ try {
 
 const port = 8000 || process.env.port;
 const app = express();
-app.use(express.json());
-app.use(cors());
 
-app.use(cors({
-  origin: '*', // Allow all origins
-}));
+app.use(express.json());
+const corsOptions = {
+  
+  origin: '*',
+  methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
+
+
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
 
 
 app.use("/login", require("./routes/login"));
